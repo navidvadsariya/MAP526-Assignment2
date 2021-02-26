@@ -6,7 +6,7 @@ namespace Assignment2.model
 {
     public class CurrencyApi
     {
-        public IList<Currency> rows { get; set; }
+        public List<Currency> rows { get; set; }
         public CurrencyApi()
         {
         }

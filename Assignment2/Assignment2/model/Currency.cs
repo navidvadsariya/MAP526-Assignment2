@@ -8,7 +8,7 @@ namespace Assignment2.model
     {
         public string code { get; set; }
         public string name { get; set; }
-        public IList<string> statuses { get; set; }
+        public List<string> statuses { get; set; }
 
         public Currency()
         {

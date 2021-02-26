@@ -2,10 +2,25 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Assignment2.MainPage">
-   
-    <StackLayout>
 
-    <ListView x:Name="postList" HasUnevenRows="True">
+    <RelativeLayout>
+        <BoxView Color="red"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression
+                    Type=RelativeToParent,
+                    Property=Width,
+                    Factor=1}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression
+                    Type=RelativeToParent,
+                    Property=Height,
+                    Factor=0.08}"/>
+        
+        <Label Text="€rypto" FontSize="40" FontAttributes="Bold" TextColor="Aqua"
+                RelativeLayout.XConstraint="150"
+                  RelativeLayout.YConstraint="0"/>
+
+        <ListView x:Name="postList" HasUnevenRows="True"
+                  RelativeLayout.XConstraint="10"
+                  RelativeLayout.YConstraint="70">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
@@ -21,5 +36,5 @@
         </ListView.ItemTemplate>
 
     </ListView>
-    </StackLayout>
+    </RelativeLayout>
 </ContentPage>

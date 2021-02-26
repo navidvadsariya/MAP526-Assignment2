@@ -12,7 +12,7 @@ namespace Assignment2
 {
     public partial class MainPage : ContentPage
     {
-        public IList<Currency> Currency_list;
+        public List<Currency> Currency_list;
         public NetworkingManager networkingManager = new NetworkingManager();
         public MainPage()
         {

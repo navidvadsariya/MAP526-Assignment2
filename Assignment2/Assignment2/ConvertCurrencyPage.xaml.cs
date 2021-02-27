@@ -24,7 +24,7 @@ namespace Assignment2
         {
             string fromCurr = fromCurrency.Text;
             string toCurr = toCurrency.Text;
-            if(fromCurr.Length > 0 && toCurr.Length > 0)
+            if(fromCurr != null && toCurr != null && fromCurr.Length > 0 && toCurr.Length > 0)
             {
                 var conversionResult = await networkingManager.GetExchangeRate(fromCurr, toCurr);
                 currencyConverted = conversionResult;

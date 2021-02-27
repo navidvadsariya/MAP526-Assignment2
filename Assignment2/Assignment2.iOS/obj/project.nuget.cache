@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ihqHQHU42UwnoL7S2yJOToN3MLSGyxK+9KUWyKrofSFGbWkqnTHBbdPdtVisgCxDvHLnnePP9KJzCHy+WA/+fg==",
+  "dgSpecHash": "PQ4wWyTKPraaY/4IrfNTJz5oZzyXYaWo5wxETj05jbNCTtVqQgmzR6h/nLj9+J0ce4KLu3CKNpaP4DQA6tZeLg==",
   "success": true,
   "projectFilePath": "C:\\Users\\navid\\Desktop\\MAP526\\Assignment2\\MAP526-Assignment2\\Assignment2\\Assignment2.iOS\\Assignment2.iOS.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,13 @@
     "C:\\Users\\navid\\.nuget\\packages\\microsoft.bcl.build\\1.0.14\\microsoft.bcl.build.1.0.14.nupkg.sha512",
     "C:\\Users\\navid\\.nuget\\packages\\microsoft.net.http\\2.2.29\\microsoft.net.http.2.2.29.nupkg.sha512",
     "C:\\Users\\navid\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\navid\\.nuget\\packages\\sqlite-net-pcl\\1.7.335\\sqlite-net-pcl.1.7.335.nupkg.sha512",
+    "C:\\Users\\navid\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.3\\sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",
+    "C:\\Users\\navid\\.nuget\\packages\\sqlitepclraw.core\\2.0.3\\sqlitepclraw.core.2.0.3.nupkg.sha512",
+    "C:\\Users\\navid\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.0.3\\sqlitepclraw.provider.dynamic_cdecl.2.0.3.nupkg.sha512",
+    "C:\\Users\\navid\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\navid\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\navid\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512"
   ],

@@ -39,7 +39,14 @@ namespace Assignment2
 
         private void addFavouriteButtonClicked(object sender, EventArgs e)
         {
-
+            if (postList != null && postList.SelectedItem != null)
+            {
+                DisplayAlert("Alert", "Add 2 fav: " + postList.SelectedItem.ToString(), "OK");
+            }
+            else
+            {
+                DisplayAlert("Alert", "Select an item from the list", "OK");
+            }
         }
 
         private async void convertButtonClicked(object sender, EventArgs e)
@@ -49,12 +56,14 @@ namespace Assignment2
 
         private void CurrencySelected(object sender, SelectedItemChangedEventArgs e)
         {
+            
+            // which curr was selected 
 
         }
 
-        private void viewFavButtonClicked(object sender, EventArgs e)
+        private async void viewFavButtonClicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new FavouriteCurrency());
         }
 
        

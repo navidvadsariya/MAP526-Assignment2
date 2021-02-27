@@ -4,11 +4,23 @@
              x:Class="Assignment2.ConvertCurrencyPage">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
-            <Entry x:Name="fromCurrency" Placeholder="Enter From currency"/>
-            <Label Text="to"/>
-            <Entry x:Name="toCurrency" Placeholder="Enter To currency"/>
+            <Label x:Name="result" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                <Label.Text>
+                    <MultiBinding StringFormat="{}{0} {1}">
+                        <Binding Path="price" />
+                        <Binding Path="error" />
+                    </MultiBinding>
+                </Label.Text>
+            </Label>
+            <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+            <Entry x:Name="fromCurrency" Placeholder="From currency"/>
+            <Label Text="-" FontSize="Large"/>
+            <Entry x:Name="toCurrency" Placeholder="To currency"/>
+            </StackLayout>
+            
             <Button Text="CONVERT" Clicked="convertClicked"/>
-            <Label x:Name="result" Text="" FontSize="Medium" FontAttributes="Bold"/>
+           
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

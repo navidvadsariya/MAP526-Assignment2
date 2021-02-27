@@ -17,24 +17,25 @@ namespace Assignment2
         public ConvertCurrencyPage()
         {
             InitializeComponent();
+            Title = "Converter";
         }
 
         private async void convertClicked(object sender, EventArgs e)
         {
             string fromCurr = fromCurrency.Text;
             string toCurr = toCurrency.Text;
-
-            var conversionResult = await networkingManager.GetExchangeRate(fromCurr, toCurr);
-            currencyConverted = conversionResult;
-            if (currencyConverted.success)
+            if(fromCurr.Length > 0 && toCurr.Length > 0)
             {
-                result.Text = currencyConverted.price;
+                var conversionResult = await networkingManager.GetExchangeRate(fromCurr, toCurr);
+                currencyConverted = conversionResult;
+                this.BindingContext = currencyConverted;
             }
             else
             {
-                result.Text = "Pair not found";
+                DisplayAlert("Alert", "Please enter 2 currencies to convert", "OK");
             }
-        
+           
+
         }
     }
 }

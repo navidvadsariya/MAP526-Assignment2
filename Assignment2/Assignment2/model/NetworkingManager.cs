@@ -58,10 +58,12 @@ namespace Assignment2.model
             var response = await client.GetStringAsync(String.Format(fromToApi, fromCurrency, toCurrency));
 
             var json = JObject.Parse(response);
-            currencyConversion = JsonConvert.DeserializeObject<ConvertCurrencyClass>(Convert.ToString(json.GetValue("ticker")));
-
-            var successRes = json.GetValue("success");
-            currencyConversion.success = (bool)successRes;
+            var successRes = json.GetValue("error");
+            currencyConversion.error = successRes.ToString();
+            if (currencyConversion.error.Length == 0)
+            {
+                currencyConversion = JsonConvert.DeserializeObject<ConvertCurrencyClass>(Convert.ToString(json.GetValue("ticker")));
+            }
 
             return currencyConversion;
         }

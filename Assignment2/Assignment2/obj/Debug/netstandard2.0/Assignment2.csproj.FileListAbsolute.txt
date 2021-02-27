@@ -25,4 +25,6 @@ C:\Users\navid\Desktop\MAP526\Assignment2\MAP526-Assignment2\Assignment2\Assignm
 C:\Users\navid\Desktop\MAP526\Assignment2\MAP526-Assignment2\Assignment2\Assignment2\obj\Debug\netstandard2.0\Assignment2.dll
 C:\Users\navid\Desktop\MAP526\Assignment2\MAP526-Assignment2\Assignment2\Assignment2\obj\Debug\netstandard2.0\ref\Assignment2.dll
 C:\Users\navid\Desktop\MAP526\Assignment2\MAP526-Assignment2\Assignment2\Assignment2\obj\Debug\netstandard2.0\Assignment2.pdb
+C:\Users\navid\Desktop\MAP526\Assignment2\MAP526-Assignment2\Assignment2\Assignment2\obj\Debug\netstandard2.0\FavouriteCurrency.xaml.g.cs
 C:\Users\navid\Desktop\MAP526\Assignment2\MAP526-Assignment2\Assignment2\Assignment2\obj\Debug\netstandard2.0\Assignment2.csprojAssemblyReference.cache
+C:\Users\navid\Desktop\MAP526\Assignment2\MAP526-Assignment2\Assignment2\Assignment2\obj\Debug\netstandard2.0\ConvertCurrencyPage.xaml.g.cs

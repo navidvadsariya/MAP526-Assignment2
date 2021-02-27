@@ -4,35 +4,44 @@
              x:Class="Assignment2.MainPage">
 
     <RelativeLayout>
-        <BoxView Color="red"
-                 RelativeLayout.WidthConstraint="{ConstraintExpression
-                    Type=RelativeToParent,
-                    Property=Width,
-                    Factor=1}"
-                 RelativeLayout.HeightConstraint="{ConstraintExpression
-                    Type=RelativeToParent,
-                    Property=Height,
-                    Factor=0.08}"/>
         
-        <Label Text="€rypto" FontSize="40" FontAttributes="Bold" TextColor="Aqua"
-                RelativeLayout.XConstraint="150"
-                  RelativeLayout.YConstraint="0"/>
+        <StackLayout Orientation="Horizontal" 
+                    RelativeLayout.XConstraint="10"
+                     RelativeLayout.YConstraint="10">
+            <Button Text="Add to Favourite" Clicked="addFavouriteButtonClicked"  BackgroundColor="Orange"/>
+            <Button Text="Convert" Clicked="convertButtonClicked" BackgroundColor="Green"/>
+            <Button Text="View Favourite" Clicked="viewFavButtonClicked" BackgroundColor="Yellow"/>
+        </StackLayout>
 
+        <Grid
+             RelativeLayout.XConstraint="10"
+             RelativeLayout.YConstraint="60">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="350"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Text="Name of currency" FontAttributes="Bold"/>
+            <Label Grid.Row="0" Grid.Column="1" Text="Code" FontAttributes="Bold"/>
+        </Grid>
         <ListView x:Name="postList" HasUnevenRows="True"
                   RelativeLayout.XConstraint="10"
-                  RelativeLayout.YConstraint="70">
+                   RelativeLayout.YConstraint="80"
+                  ItemSelected="CurrencySelected">
         <ListView.ItemTemplate>
             <DataTemplate>
-                <ViewCell>
-                    <StackLayout Orientation="Horizontal" Padding="0,13" >
-                        <StackLayout>
-                            <Label Text="{Binding name}" />
-                            <Label Text="{Binding code}"/>
-                        </StackLayout>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="20">
+                            <StackLayout HorizontalOptions="StartAndExpand">
+                                <Label Text="{Binding name}"/>
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="EndAndExpand">
+                                <Label Text="{Binding code}"/>
 
-                    </StackLayout>
-                </ViewCell>
-            </DataTemplate>
+                            </StackLayout>
+                         
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
         </ListView.ItemTemplate>
 
     </ListView>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Assignment2.ConvertCurrencyPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Entry x:Name="fromCurrency" Placeholder="Enter From currency"/>
+            <Label Text="to"/>
+            <Entry x:Name="toCurrency" Placeholder="Enter To currency"/>
+            <Button Text="CONVERT" Clicked="convertClicked"/>
+            <Label x:Name="result" Text="" FontSize="Medium" FontAttributes="Bold"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

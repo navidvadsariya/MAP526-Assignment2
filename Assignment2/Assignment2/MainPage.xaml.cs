@@ -12,24 +12,63 @@ namespace Assignment2
 {
     public partial class MainPage : ContentPage
     {
-        public List<Currency> Currency_list;
-        public NetworkingManager networkingManager = new NetworkingManager();
+        NetworkingManager networkingManager = new NetworkingManager();
+        ObservableCollection<CurrencyClass> currency_list = new ObservableCollection<CurrencyClass>();
+
         public MainPage()
         {
             InitializeComponent();
+            Title = "€rypto";
         }
         protected async override void OnAppearing()
         {
+            // load only once when app starts
+            if(currency_list.Count == 0)
+            {
+                postList.ItemsSource = null;
 
-            postList.ItemsSource = null;
+                var list = await networkingManager.GetCurrencies();
+                currency_list = list;
 
-            var list = await networkingManager.GetCurrencies();
-            Currency_list = list.rows;
-
-            postList.ItemsSource = Currency_list;
+                postList.ItemsSource = currency_list;
+            }
+           
             base.OnAppearing();
 
         }
+
+        private void addFavouriteButtonClicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void convertButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ConvertCurrencyPage());
+        }
+
+        private void CurrencySelected(object sender, SelectedItemChangedEventArgs e)
+        {
+
+        }
+
+        private void viewFavButtonClicked(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
+        //
+        /*
+        on click method(){
+        
+            which item was clicked get code 
+        save code in sql table 
+        
+        }
+        */
+        ///
 
     }
 }

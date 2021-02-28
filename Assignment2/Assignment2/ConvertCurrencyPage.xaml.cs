@@ -32,7 +32,7 @@ namespace Assignment2
             }
             else
             {
-                DisplayAlert("Alert", "Please enter 2 currencies to convert", "OK");
+                await DisplayAlert("Alert", "Please enter 2 currencies to convert", "OK");
             }
            
 

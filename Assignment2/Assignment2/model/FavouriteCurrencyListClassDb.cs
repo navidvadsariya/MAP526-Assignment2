@@ -13,26 +13,8 @@ namespace Assignment2.model
         [PrimaryKey,AutoIncrement]
         public int Id { get; set; }
 
-        private string _name;// backing field 
-        [MaxLength(255)]
-        public string name
-        {
-            get { return _name; }
-            set
-            {
-                if (value == _name)
-                    return;
-                _name = value;
-
-                if (PropertyChanged != null)
-                {
-
-                    PropertyChanged(this, new PropertyChangedEventArgs(nameof(name)));
-                }
-            }
-        }
         private string _code;// backing field 
-        [MaxLength(255)]
+        [Unique, MaxLength(10)]
         public string code
         {
             get { return _code; }
@@ -48,6 +30,38 @@ namespace Assignment2.model
                     PropertyChanged(this, new PropertyChangedEventArgs(nameof(code)));
                 }
             }
+        }
+        private bool _isHomeCurrency; // backing field 
+        public bool isHomeCurrency
+        {
+            get { return _isHomeCurrency; }
+            set
+            {
+                if (value == _isHomeCurrency)
+                    return;
+                _isHomeCurrency = value;
+
+                if (PropertyChanged != null)
+                {
+
+                    PropertyChanged(this, new PropertyChangedEventArgs(nameof(isHomeCurrency)));
+                }
+            }
+        }
+
+        public FavouriteCurrencyListClassDb()
+        {
+        }
+
+        public FavouriteCurrencyListClassDb(string code)
+        {
+            this.code = code;
+            this.isHomeCurrency = false;
+        }
+
+        public static implicit operator FavouriteCurrencyListClassDb(List<FavouriteCurrencyListClassDb> v)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -120,3 +120,11 @@ C:\Users\navid\Desktop\MAP526\Assignment2\MAP526-Assignment2\Assignment2\Assignm
 C:\Users\navid\Desktop\MAP526\Assignment2\MAP526-Assignment2\Assignment2\Assignment2.iOS\obj\iPhone\Debug\Assignment2.iOS.csproj.CopyComplete
 C:\Users\navid\Desktop\MAP526\Assignment2\MAP526-Assignment2\Assignment2\Assignment2.iOS\obj\iPhone\Debug\Assignment2.iOS.exe
 C:\Users\navid\Desktop\MAP526\Assignment2\MAP526-Assignment2\Assignment2\Assignment2.iOS\obj\iPhone\Debug\Assignment2.iOS.pdb
+C:\Users\navid\Desktop\MAP526\Assignment2\MAP526-Assignment2\Assignment2\Assignment2.iOS\bin\iPhone\Debug\SQLite-net.dll
+C:\Users\navid\Desktop\MAP526\Assignment2\MAP526-Assignment2\Assignment2\Assignment2.iOS\bin\iPhone\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Users\navid\Desktop\MAP526\Assignment2\MAP526-Assignment2\Assignment2\Assignment2.iOS\bin\iPhone\Debug\SQLitePCLRaw.nativelibrary.dll
+C:\Users\navid\Desktop\MAP526\Assignment2\MAP526-Assignment2\Assignment2\Assignment2.iOS\bin\iPhone\Debug\SQLitePCLRaw.core.dll
+C:\Users\navid\Desktop\MAP526\Assignment2\MAP526-Assignment2\Assignment2\Assignment2.iOS\bin\iPhone\Debug\SQLitePCLRaw.provider.dynamic_cdecl.dll
+C:\Users\navid\Desktop\MAP526\Assignment2\MAP526-Assignment2\Assignment2\Assignment2.iOS\bin\iPhone\Debug\System.Buffers.dll
+C:\Users\navid\Desktop\MAP526\Assignment2\MAP526-Assignment2\Assignment2\Assignment2.iOS\bin\iPhone\Debug\System.Memory.dll
+C:\Users\navid\Desktop\MAP526\Assignment2\MAP526-Assignment2\Assignment2\Assignment2.iOS\bin\iPhone\Debug\System.Runtime.CompilerServices.Unsafe.dll

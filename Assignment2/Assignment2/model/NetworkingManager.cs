@@ -13,11 +13,11 @@ namespace Assignment2.model
     {
         public ObservableCollection<CurrencyClass> currencyList { get; set; }
 
-        private string allCurrencieApi = "https://www.cryptonator.com/api/currencies";
+        private readonly string allCurrencieApi = "https://www.cryptonator.com/api/currencies";
 
-        private string fromToApi = "https://api.cryptonator.com/api/ticker/{0}-{1}";
+        private readonly string fromToApi = "https://api.cryptonator.com/api/ticker/{0}-{1}";
 
-        private HttpClient client = new HttpClient();
+        private readonly HttpClient client = new HttpClient();
 
         public NetworkingManager()
         {
@@ -32,23 +32,23 @@ namespace Assignment2.model
             return currencyList;
         }
 
-        //public async Task<List<FavouriteCurrency>> GetExchangeRateForFavCurr(string fromCurrency, List<string> favCurrencies)
-        //{
-        //    List<FavouriteCurrency> favCurrWithPrice = new List<FavouriteCurrency>();
-        //    string url = "https://api.cryptonator.com/api/ticker/";
+        public async Task<ObservableCollection<FavouriteCurrencyModel>> GetExchangeRateForFavCurr(string fromCurrency, ObservableCollection<FavouriteCurrencyListClassDb> favCurrencies)
+        {
+            ObservableCollection<FavouriteCurrencyModel> favCurrWithPrice = new ObservableCollection<FavouriteCurrencyModel>();
 
-        //    foreach (var toCurrency in favCurrencies)
-        //    {
-        //        dynamic json = await GetExchangeRate(fromCurrency, toCurrency);
-        //        if ((bool)json.success)
-        //        {
-        //            dynamic ticker = json.ticker;
-        //            favCurrWithPrice.Add(new FavouriteCurrency(Convert.ToString(ticker.target), Convert.ToString(ticker.price)));
-        //        }
-
-        //    }
-        //    return favCurrWithPrice;
-        //}
+            foreach (var toCurrency in favCurrencies)
+            {
+                var response = await client.GetStringAsync(String.Format(fromToApi, fromCurrency, toCurrency.code));
+                var json = JObject.Parse(response);
+                var rate = "-";
+                if ((bool)json.GetValue("success"))
+                {
+                    rate = Convert.ToString(JObject.Parse(Convert.ToString(json.GetValue("ticker"))).GetValue("price"));
+                }
+                favCurrWithPrice.Add(new FavouriteCurrencyModel(toCurrency.code, rate));
+            }
+            return favCurrWithPrice;
+        }
 
         public async Task<ConvertCurrencyClass> GetExchangeRate(string fromCurrency, string toCurrency)
         {
@@ -67,10 +67,5 @@ namespace Assignment2.model
 
             return currencyConversion;
         }
-
-
-
-
-
     }
 }

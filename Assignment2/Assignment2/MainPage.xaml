@@ -13,6 +13,9 @@
             <Button Text="View Favourite" Clicked="viewFavButtonClicked" BackgroundColor="Yellow"/>
         </StackLayout>
 
+        <ActivityIndicator x:Name="isLoading" RelativeLayout.XConstraint="150"
+                   RelativeLayout.YConstraint="250"/>
+        
         <Grid
              RelativeLayout.XConstraint="10"
              RelativeLayout.YConstraint="60">
@@ -25,8 +28,7 @@
         </Grid>
         <ListView x:Name="postList" HasUnevenRows="True"
                   RelativeLayout.XConstraint="10"
-                   RelativeLayout.YConstraint="80"
-                  ItemSelected="CurrencySelected">
+                   RelativeLayout.YConstraint="80">
         <ListView.ItemTemplate>
             <DataTemplate>
                     <ViewCell>

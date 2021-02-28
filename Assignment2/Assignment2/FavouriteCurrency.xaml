@@ -2,11 +2,41 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Assignment2.FavouriteCurrency">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Favourite currency list!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <RelativeLayout>
+
+            <StackLayout Orientation="Horizontal" 
+                    RelativeLayout.XConstraint="10"
+                     RelativeLayout.YConstraint="10">
+                <Button x:Name="setHomeCurrencyBtn" Text="Set home currency" Clicked="setHomeCurrency" BackgroundColor="Orange"/>
+                <Button x:Name="removeFavCurrencyBtn" Text="Remove" Clicked="removeFavCurrency" BackgroundColor="Green"/>
+                <Button x:Name="removeAllFavCurrencyBtn" Text="Remove all" Clicked="removeAllFavCurrency" BackgroundColor="Yellow"/>
+            </StackLayout>
+        <Label x:Name="msg" FontSize="Medium"  RelativeLayout.XConstraint="10"
+             RelativeLayout.YConstraint="60" />
+        
+        <ListView x:Name="fav_list" HasUnevenRows="True" RelativeLayout.XConstraint="10"
+                   RelativeLayout.YConstraint="90">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="20">
+                                <StackLayout HorizontalOptions="StartAndExpand">
+                                    <Label Text="{Binding currency}"/>
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="EndAndExpand">
+                                    <Label Text="{Binding rate}"/>
+
+                                </StackLayout>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        <ActivityIndicator x:Name="isLoading" RelativeLayout.XConstraint="150"
+                   RelativeLayout.YConstraint="250"/>
+            <Label x:Name="infoMsg" FontSize="Small"  RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=10}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Constant=-40}" />
+    </RelativeLayout>
 </ContentPage>
